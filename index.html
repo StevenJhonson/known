@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    .row {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(city.jpg);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top: 5px solid green;
+    }
+
+    .col1 {
+        display: flex;
+        width: 70%;
+        margin: 0px auto;
+        justify-content: space-between;
+        /* align-items: center;
+        text-align: center; */
+        height: 50px;
+    }
+
+    .back-color {
+        background-color: white;
+    }
+
+    .col1-1 {
+        padding: 10px 15px;
+
+    }
+
+    .col2-2 {
+        padding: 10px 15px;
+    }
+
+    .col2-2 i {
+        background-color: green;
+        color: white;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    ul {
+        height: 50px;
+        display: flex;
+        margin: 0px auto;
+        list-style: none;
+    }
+
+    li {
+        height: 100%;
+        padding: 10px 15px;
+    }
+
+    ul li:hover {
+        background-color: green;
+        color: white;
+    }
+
+    .col2-2 {
+        display: flex;
+        margin: 0px auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col3 {
+        color: white;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .col3 h1 {
+        margin-top: 200px;
+        margin-bottom: 10px;
+        line-height: 40px;
+    }
+
+    .col3 p {
+        line-height: 25px;
+    }
+
+    .col3 button {
+        padding: 15px 20px;
+        border-radius: 30px;
+        background-color: transparent;
+        border: solid white 1px;
+        color: white;
+        margin-top: 30px;
+    }
+
+    .col3 button:hover {
+        background-color: green;
+        border: none;
+    }
+
+    .boxes {
+        width: 70%;
+        margin: 80px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box1 {
+        box-shadow: 1px 1px 1px rgb(195, 192, 192);
+        padding: 20px;
+        width: 33%;
+        height: 40vh;
+        margin: 0 auto;
+
+    }
+
+    .box1 h1 {
+        background-color: blue;
+        width: 15%;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: larger;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .box1 h2 {
+        margin-bottom: 20px;
+    }
+
+    .box1 p {
+        line-height: 28px;
+    }
+
+    .row1 {
+        width: 70%;
+        margin: 0 auto;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left h2 {
+        margin-bottom: 40px;
+    }
+
+    .left .icon {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        margin-right: 50px;
+    }
+
+    .text-content1 {
+        line-height: 25px;
+        margin-top: 20px;
+    }
+
+    .teleg {
+        font-size: 40px;
+        margin-right: 20px;
+    }
+
+    .right {
+        background-color: black;
+        color: white;
+        width: 70%;
+        height: 55vh;
+        border-radius: 50%;
+        border: none;
+        text-align: center;
+        align-items: center;
+    }
+
+    .right h2 {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    form input {
+        background-color: black;
+        border: none;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        margin-right: 60px;
+    }
+
+    .right button {
+        padding: 15px 20px;
+        border: none;
+        border-radius: 25px;
+        margin-top: 25px;
+    }
+
+    .teachers {
+        width: 70%;
+        margin: 50px auto;
+        height: 80vh;
+    }
+
+    .four-pics {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .teachers h1 {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .teachers h4 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .pics {
+        width: 23%;
+        box-shadow: 1px 1px 1px rgb(221, 219, 219);
+    }
+
+    .texts h2 {
+        margin-top: 10px;
+        font-size: larger;
+    }
+
+    .texts p {
+        margin-top: 6px;
+        font-size: smaller;
+    }
+
+    .footer-icons {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pics hr {
+        margin-top: 20px;
+        background-color: rgb(202, 199, 199);
+        border: none;
+        height: 1px;
+    }
+
+    .Courses {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .Courses h1 {
+        text-align: center;
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .Courses h4 {
+        letter-spacing: 2px;
+        text-align: center;
+        font-size: 15px;
+        color: rgb(43, 42, 42);
+        margin-bottom: 40px;
+    }
+
+    .three-pics {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .three-pics .pictures .texts {
+        width: 90%;
+        padding: 15px;
+        line-height: 20px;
+    }
+
+    .tagtext {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .tagtext i {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+
+    .tagtext button {
+        padding: 6px;
+        margin-left: 30px;
+        border-radius: 5px;
+        background-color: blue;
+        border: none;
+
+    }
+    .student {
+        width: 70%;
+        margin: 80px auto;
+        height: 90vh;
+    }
+    .student h1 {
+        text-align: center;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    .student h3 {
+        text-align: center;
+        font-size: smaller;
+        letter-spacing: 1px;
+    }
+    .can {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 100px auto;
+    }
+    .can1, .can2, .can3 {
+        height: 300px;
+        width: 32%;
+        box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(206, 205, 205);
+        padding: 25px;
+    }
+    .can1 .andrio i, .can2 .andrio i, .can3 .andrio i {
+        margin-bottom: 25px;
+        font-size: 30px;
+        color: black;
+    }
+    .andrio h4 {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-bottom: 25px;
+    }
+    .andrio {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        align-items: center;
+    }
+    .can1 p, .can2 p, .can3 p{
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+    .can1 i, .can2 i, .can3 i {
+        color: blue;
+        font-size: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- <hr style="width: 100%; height: 10px; background-color: green;"> -->
+        <div class="row">
+            <div class="back-color">
+                <div class="col1">
+                    <div class="col1-1">
+                        <h3>Known</h3>
+                    </div>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Our Teachers</li>
+                        <li>Courses</li>
+                        <li>Reviews</li>
+                        <li>Contact</li>
+                    </ul>
+                    <div class="col2-2">
+                        <i class="fas fa-phone"></i>
+                        <h3>+65 2244 1100</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col2"></div>
+            <div class="col3">
+                <h1>Distance Learning <br>Education Center</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem doloremque aliquam earum <br>
+                    facere
+                    fugiat expedita quibusdam?</p>
+                <button>Discover more</button>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="box1">
+                <h1>01</h1>
+                <h2>Trending Courses</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                    laudantium quibusdam dolore totam!</p>
+            </div>
+            <div class="box1">
+                <h1>01</h1>
+                <h2>Trending Courses</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                    laudantium quibusdam dolore totam!</p>
+            </div>
+            <div class="box1">
+                <h1>01</h1>
+                <h2>Trending Courses</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+                    laudantium quibusdam dolore totam!</p>
+            </div>
+
+        </div>
+        <div class="row1">
+            <div class="left">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur est sint ratione.</h2>
+                <div class="text-content1">
+                    <div class="icon">
+                        <div class="teleg"> <i class="fab fa-telegram"></i></div>
+                        <div class="texted">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique harum vitae libero.
+                                Corrupti, fugiat odit?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-content1">
+                    <div class="icon">
+                        <div class="teleg"> <i class="fab fa-telegram"></i></div>
+                        <div class="texted">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique harum vitae libero.
+                                Corrupti, fugiat odit?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-content1">
+                    <div class="icon">
+                        <div class="teleg"> <i class="fab fa-telegram"></i></div>
+                        <div class="texted">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique harum vitae libero.
+                                Corrupti, fugiat odit?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>Sign up Today</h2>
+                <form action="#">
+                    <input type="text" placeholder="Enter full name"> <br>
+                    <input type="email" placeholder="Enter email address"> <br>
+                    <input type="password" placeholder="Your password"><br>
+                    <button>Get started</button>
+                </form>
+            </div>
+        </div>
+        <div class="teachers">
+            <h1>Teachers</h1>
+            <h4>Meet professional Trainers</h4>
+            <div class="four-pics">
+                <div class="pics">
+                    <div class="pic">
+                        <img src="mine.jpg" width="215px" height="230px" alt="">
+                    </div>
+                    <div class="texts">
+                        <h2>Oybek Nozimov</h2>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                    <hr>
+                    <div class="footer-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+
+                    </div>
+                </div>
+                <div class="pics">
+                    <div class="pic">
+                        <img src="mine.jpg" width="215px" height="230px" alt="">
+                    </div>
+                    <div class="texts">
+                        <h2>Oybek Nozimov</h2>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                    <hr>
+                    <div class="footer-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+
+                    </div>
+                </div>
+                <div class="pics">
+                    <div class="pic">
+                        <img src="mine.jpg" width="215px" height="230px" alt="">
+                    </div>
+                    <div class="texts">
+                        <h2>Oybek Nozimov</h2>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                    <hr>
+                    <div class="footer-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+
+                    </div>
+                </div>
+                <div class="pics">
+                    <div class="pic">
+                        <img src="mine.jpg" width="215px" height="230px" alt="">
+                    </div>
+                    <div class="texts">
+                        <h2>Oybek Nozimov</h2>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>
+                    <hr>
+                    <div class="footer-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Courses">
+            <h1>Popular Courses</h1>
+            <h4>Upgrade your skills with newest courses</h4>
+            <div class="three-pics">
+                <div class="pictures">
+                    <div class="picture">
+                        <img src="mine.jpg" width="300px" height="240px" alt="">
+                    </div>
+                    <div class="texts">
+                        <h2>Oybek Nozimov</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="tagtext">
+                        <i class="fab fa-instagram"></i>
+                        <h4>nozimov_oybek</h4>
+                        <div class="btn"><button>Free</button></div>
+                    </div>
+                </div>
+                <div class="pictures">
+                    <div class="picture">
+                        <img src="mine.jpg" width="300px" height="240px" alt="">
+                    </div>
+                    <div class="texts">
+                        <h2>Oybek Nozimov</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="tagtext">
+                        <i class="fab fa-instagram"></i>
+                        <h4>nozimov_oybek</h4>
+
+                        <div class="btn"><button>Free</button></div>
+                    </div>
+                </div>
+                <div class="pictures">
+                    <div class="picture">
+                        <img src="mine.jpg" width="300px" height="240px" alt="">
+                    </div>
+                    <div class="texts">
+                        <h2>Oybek Nozimov</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="tagtext">
+                        <i class="fab fa-instagram"></i>
+                        <h4>nozimov_oybek</h4>
+                        <div class="btn"><button>Free</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="student">
+            <h1>Student Reviews</h1>
+            <h3>from around the world</h3>
+
+            <div class="can">
+                <div class="can1">
+                    <div class="andrio">
+                        <i class="fab fa-telegram"></i>
+                        <h4>Andrio <br> Web Developer </h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolores! Iure, quod nemo
+                        adipisci quisquam repellendus nulla pariatur.</p>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+
+                </div>
+                <div class="can2">
+                    <div class="andrio">
+                        <i class="fab fa-telegram"></i>
+                        <h4>Andrio <br> Web Developer </h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolores! Iure, quod nemo
+                        adipisci quisquam repellendus nulla pariatur.</p>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+
+                </div>
+                <div class="can3">
+                    <div class="andrio">
+                        <i class="fab fa-telegram"></i>
+                        <h4>Andrio <br> Web Developer </h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolores! Iure, quod nemo
+                        adipisci quisquam repellendus nulla pariatur.</p>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
